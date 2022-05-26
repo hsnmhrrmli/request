@@ -14,9 +14,11 @@ const arr=[
 {id:"10",name:"powerbank",amount:"30",price:"1"}
 ]
 console.log(arr)
-// app.get('/products/:id', function (req, res) {
-  app.get('/user/:id', function (req, res) {
+  app.get('/prod/:id', function (req, res) {
     res.send(JSON.stringify(arr.find((user) => user.id == req.params.id)))
+  });
+  app.get('/prod', function (req, res) {
+    res.send(JSON.stringify(arr))
   });
 
 
